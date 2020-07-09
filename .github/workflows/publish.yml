@@ -27,12 +27,6 @@ jobs:
       with:
         name: VSIX
         path: "*.vsix"
-    - name: Rename VSIX
-      run: mv *.vsix code4z.vsix
-    - name: Run semantic-release
-      run: npx semantic-release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Commit new version and changelog
       run: |
         git config --global user.email "actions@github.com"
@@ -43,3 +37,9 @@ jobs:
       uses: ad-m/github-push-action@v0.6.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Rename VSIX
+      run: mv *.vsix code4z.vsix
+    - name: Run semantic-release
+      run: npx semantic-release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

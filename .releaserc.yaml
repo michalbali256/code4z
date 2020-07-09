@@ -6,6 +6,7 @@ ci: true
 tagFormat: ${version}
 plugins:
   - "@semantic-release/commit-analyzer"
+  - "@semantic-release/release-notes-generator"
   - - "@semantic-release/exec"
     - generateNotesCmd: sh prepare_release.sh ${nextRelease.version} ${branch.name} "${nextRelease.notes}" ${lastRelease.version} ${Date.now()}
   - - "@semantic-release/github"
