@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/michalbali256/code4z/compare/1.2.0...1.2.1) (2020-07-09)
+
+
+### Bug Fixes
+
+* notes generator ([a6c7e08](https://github.com/michalbali256/code4z/commit/a6c7e089be673d52b725b548fb9d738514690a8c))
+
+
+
 ## [1.1.3] 2020-07-08
 
 - Readme update
