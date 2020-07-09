@@ -1,0 +1,30 @@
+name: CI
+
+on: push
+    
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+
+    
+    steps:
+    
+    - uses: actions/checkout@v2
+    
+    - name: Pre-requisities
+      run: sudo npm install -g vsce
+
+    - run: npm install
+
+    # Runs a set of commands using the runners shell
+    - name: VSCE
+      run: vsce package
+      
+    - run: ls -l
+    
+    - uses: actions/upload-artifact@v2
+      with:
+        name: VSIX
+        path: "*.vsix"
+    
+    
