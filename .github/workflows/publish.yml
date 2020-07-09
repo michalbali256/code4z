@@ -27,6 +27,6 @@ jobs:
         name: VSIX
         path: "*.vsix"
     - name: Run semantic-release
-      run: shx semantic-release
+      run: npx semantic-release
     
     
